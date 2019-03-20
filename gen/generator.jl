@@ -7,7 +7,7 @@ wc = init(; headers = [HANABI_H],
             common_file = joinpath(@__DIR__, "libhanabi_common.jl"),
 	    clang_includes = [CLANG_INCLUDE],
             header_wrapped = (root, current) -> root == current,
-	    header_library = x->"libhanabi",
+	    header_library = x->"libpyhanabi",
             clang_diagnostics = true)
 
 run(wc)
