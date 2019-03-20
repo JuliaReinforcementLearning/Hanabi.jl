@@ -1,4 +1,4 @@
-# Automatically generated using Clang.jl
+# Automatically generated using Clang.jl wrap_c
 
 
 struct PyHanabiCard
