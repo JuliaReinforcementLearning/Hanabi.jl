@@ -1,0 +1,38 @@
+# Hanabi.jl
+
+This package provides a Julia wrapper for the game [deepmind/hanabi-learning-environment](https://github.com/deepmind/hanabi-learning-environment) with [Clang.jl](https://github.com/JuliaInterop/Clang.jl)
+
+## Install
+
+```julia
+pkg> add https://github.com/findmyway/Hanabi.jl
+```
+
+## Usage
+
+All the APIs should be the same with those listed [here](https://github.com/findmyway/hanabi-learning-environment/blob/master/pyhanabi.h) with renaming.
+
+- `CamelFunctionName` -> `camel_function_name`
+- `PyStructName` -> `StructName`
+
+## Example
+
+```julia
+game = Ref{HanabiGame}()
+new_default_game(game)
+observation = Ref{HanabiObservation}()
+state = Ref{HanabiState}()
+new_state(game, state)
+observation = Ref{HanabiObservation}()
+new_observation(state, 0, observation)
+unsafe_string(obs_to_string(observation))
+# Life tokens: 3
+# Info tokens: 8
+# Fireworks: R0 Y0 G0 W0 B0
+# Hands:
+# -----
+# Deck size: 50
+# Discards:
+```
+
+You may also check some high level APIs in [ReinforcementLearningEnvironments.jl](https://github.com/JuliaReinforcementLearning/ReinforcementLearningEnvironments.jl)
