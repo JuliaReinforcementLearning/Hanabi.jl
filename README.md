@@ -35,4 +35,4 @@ unsafe_string(obs_to_string(observation))
 # Discards:
 ```
 
-You may also check some high level APIs in [ReinforcementLearningEnvironments.jl](https://github.com/JuliaReinforcementLearning/ReinforcementLearningEnvironments.jl)
+You may also check some high level APIs in [ReinforcementLearningEnvironments.jl](https://github.com/JuliaReinforcementLearning/ReinforcementLearningEnvironments.jl/blob/master/src/environments/hanabi.jl)
