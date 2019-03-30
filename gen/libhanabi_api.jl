@@ -1,4 +1,4 @@
-# Julia wrapper for header: /home/tj/data/workspace/github/Hanabi/deps/usr/include/pyhanabi.h
+# Julia wrapper for header: /home/tj/workspace/github/Hanabi.jl/deps/usr/include/pyhanabi.h
 # Automatically generated using Clang.jl wrap_c
 
 
@@ -384,4 +384,8 @@ end
 
 function EncodeObservation(encoder, observation)
     ccall((:EncodeObservation, libpyhanabi), Cstring, (Ptr{pyhanabi_observation_encoder_t}, Ptr{pyhanabi_observation_t}), encoder, observation)
+end
+
+function EncodeObs(encoder, observation, encoding)
+    ccall((:EncodeObs, libpyhanabi), Cvoid, (Ptr{pyhanabi_observation_encoder_t}, Ptr{pyhanabi_observation_t}, Ptr{Cint}), encoder, observation, encoding)
 end
