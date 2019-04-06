@@ -5,7 +5,7 @@ This package provides a Julia wrapper for the game [deepmind/hanabi-learning-env
 ## Install
 
 ```julia
-pkg> add https://github.com/findmyway/Hanabi.jl
+pkg> add Hanabi
 ```
 
 ## Usage
