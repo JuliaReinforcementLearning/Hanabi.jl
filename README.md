@@ -36,3 +36,9 @@ unsafe_string(obs_to_string(observation))
 ```
 
 You may also check some high level APIs in [ReinforcementLearningEnvironments.jl](https://github.com/JuliaReinforcementLearning/ReinforcementLearningEnvironments.jl)
+
+## Play Game Interactively
+
+Check out [src/service.jl](https://github.com/JuliaReinforcementLearning/Hanabi.jl/blob/master/src/service.jl) to see how to play Hanabi interactively.
+
+![play_interactively.png](https://raw.githubusercontent.com/JuliaReinforcementLearning/Hanabi.jl/master/docs/src/assets/play_interactively.png)
