@@ -1,7 +1,7 @@
 name = "Hanabi"
 uuid = "705708ad-e62c-5f47-9095-732127600058"
 authors = ["TianJun <tianjun@wisetechai.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 BinaryProvider = "b99e7846-7c00-51b0-8f62-c81ae34c0232"
