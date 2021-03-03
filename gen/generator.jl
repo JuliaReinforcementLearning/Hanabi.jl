@@ -1,13 +1,11 @@
-using Clang
+using Clang.Generators
+using Hanabi_jll
 
-const HANABI_H = joinpath(@__DIR__, "..", "deps", "usr", "include", "pyhanabi.h") |> normpath
+cd(@__DIR__)
 
-wc = init(; headers = [HANABI_H],
-            output_file = joinpath(@__DIR__, "libhanabi_api.jl"),
-            common_file = joinpath(@__DIR__, "libhanabi_common.jl"),
-	    clang_includes = [CLANG_INCLUDE],
-            header_wrapped = (root, current) -> root == current,
-	    header_library = x->"libpyhanabi",
-            clang_diagnostics = true)
+options = load_options(joinpath(@__DIR__, "generator.toml"))
 
-run(wc)
+# ctx = create_context(Hanabi_jll.libhanabi_h, get_default_args(), options)
+ctx = create_context(joinpath(@__DIR__, "libhanabi_patched.h"), get_default_args(), options)
+
+build!(ctx)
