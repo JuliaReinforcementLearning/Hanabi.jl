@@ -1,0 +1,10 @@
+[general]
+library_name = "libhanabi"
+output_file_path = "../src/Hanabi.jl"
+module_name = "Hanabi"
+jll_pkg_name = "Hanabi_jll"
+epilogue_file_path = "./epilogue.jl"
+use_julia_native_enum_type = true
+
+[codegen.macro]
+macro_mode = "basic"
